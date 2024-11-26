@@ -1,18 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ms;
-import ms.Gui.Login.Frame;
 
-/**
- *
- * @author HUNG
- */
 public class Ms {
+    private ms.Gui.Login.Frame loginFrame;
+    private ms.Gui.Teacher.Frame teacherFrame;
 
+    public Ms() {
+        loginFrame = new ms.Gui.Login.Frame();
+        teacherFrame = new ms.Gui.Teacher.Frame();
+
+        loginFrame.setLocationRelativeTo(null);
+        teacherFrame.setLocationRelativeTo(null);
+    }
+    
     public static void main(String[] args) {
-        // Đảm bảo giao diện hiển thị đúng phong cách Nimbus (tuỳ chọn)
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -24,9 +25,13 @@ public class Ms {
             System.err.println("Không thể thiết lập giao diện Nimbus");
         }
 
+        Ms app = new Ms();
+
+        new ms.Controller.Login(app.loginFrame, app.teacherFrame);
+
         // Hiển thị Frame
         java.awt.EventQueue.invokeLater(() -> {
-            new Frame().setVisible(true);
+            app.loginFrame.setVisible(true);
         });
     }
     
