@@ -28,6 +28,8 @@ public class Ms {
         Ms app = new Ms();
 
         new ms.Controller.Login(app.loginFrame, app.teacherFrame);
+        
+        new ms.Controller.Teacher(app.loginFrame, app.teacherFrame);
 
         // Hiển thị Frame
         java.awt.EventQueue.invokeLater(() -> {

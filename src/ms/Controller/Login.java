@@ -35,9 +35,9 @@ public class Login {
 
     private void showPassword(ItemEvent e) {
         if (e.getStateChange() == ItemEvent.SELECTED) {
-            this.loginFrame.jTextField2.setEchoChar((char) 0); // Hiện mật khẩu
+            this.loginFrame.jPasswordField1.setEchoChar((char) 0); // Hiện mật khẩu
         } else {
-            this.loginFrame.jTextField2.setEchoChar('*'); // Ẩn mật khẩu
+            this.loginFrame.jPasswordField1.setEchoChar('*'); // Ẩn mật khẩu
         }
     }
 }
